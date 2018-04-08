@@ -3,7 +3,6 @@
 	<head>
 		<title>Our Registry - Erica & Omar</title>
 
-
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
 
@@ -94,9 +93,26 @@ var STYLE_PREFIX = 'wsite';
 	}
 //-->
 </script>
-		
-		
-	</head>
+        
+<script>
+$(function() {
+    // Desired offset, in pixels
+    var offset = -65;
+    // Desired time to scroll, in milliseconds
+    var scrollTime = 1000;
+
+    $('a[href^="#"]').click(function() {
+        // Need both `html` and `body` for full browser support
+        $("html, body").animate({
+            scrollTop: $( $(this).attr("href") ).offset().top + offset 
+        }, scrollTime);
+
+        // Prevent the jump/flash
+        return false;
+    });
+});
+</script>
+
 	<body class="no-header-page  wsite-theme-light  wsite-page-our-registry"><div class="wrapper">
     <div class="cento-header">
       <div class="container">
@@ -146,7 +162,7 @@ var STYLE_PREFIX = 'wsite';
 						href="rsvp-information.html"
 				class="wsite-menu-item"
 				>
-				RSVP Information
+				RSVP
 			</a>
 			
 		</li>
@@ -165,17 +181,66 @@ var STYLE_PREFIX = 'wsite';
 			<div class="wsite-section-elements">
 				<h2 class="wsite-content-title">Our Registry</h2>
 
-<div class="paragraph">Gifts. Gifts. Gifts. Blah Blah Blah.</div>
+<div class="paragraph"> 
+    <p> We appreciate your love and support, and we would like to stress that gifts are not expected at our celebration. For those who would like to give gifts, we have registered with the not-for-profit organization <a href="#Donation">Skateistan</a> as well as a few stores. To avoid the international shipping and customs fees that would come from ordering in the States, we have registered at two US chains in Canada:  <a href="#Registry1">Crate & Barrel</a> and <a href="#Registry2">Bed, Bath & Beyond</a>. (With his tech wizardry, Omar has  embedded a currency calculator that reflects the exchange rate between Canada and US dollars.) For those who prefer to purchase in the US, we have also registered for dinnerware at <a href="#Registry3">Lenox</a>.   </p>
+                </div>
 			</div>
+            
+
+            <div id="Donation" class="paragraph">
+                <h3 align="left">Skateistan</h3>
+                <p> Although it started in Afghanistan, Skateistan now runs in Cambodia and South Africa too, reaching thousands of children and youth. What started with a board and four wheels is now an award-winning, international NGO (Non-Governmental Organization) with the mission of empowering children and youth through skateboarding and education. Almost 10 years on, Skateistan is creating leaders that make a better world. </p>
+                <iframe width="500" height="330" src="https://www.youtube.com/embed/yGoRXuHiVFo">
+                </iframe>
+            </div>
+    
+            <div id="Registry1" class="paragraph">
+                <h3> Crate & Barrel (Canada) </h3>
+                <p> We have registered at two US chains in Canada to avoid the international shipping and customs fees that would come from ordering in the States. The Crate & Barrel stores in Canada have not yet adopted the registry system used in the US, so, you can view our registry online, but you will need to call the Vancouver store if you would like to make a purchase. (Prices will be listed in Canadian dollars.) The store number is: 1 (604) 269-4300. International charges will apply unless you use Google Hangouts or a similar app. </p>
+            </div>
+    
+            <div id="Registry2" class="paragraph">
+                <h3> Bed, Bath & Beyond (Canada) </h3>
+                <p>Thankfully, you can view and purchase from our Canadian Bed, Bath & Beyond registry online. Gifts will be shipped directly to our apartment in Vancouver. (Prices will be listed in Canadian dollars.)  </p>
+            </div>
+            <div id="Registry3" class="paragraph">
+                <h3> Lenox (United States) </h3>
+            </div>
+            
+            <div class="paragraph"> 
+                <h3> Currency Calculator </h3>
+                <p style="margin-bottom: 10px"> The following currency calculator will provide you with two helpful bits of information prior to your purchase. </p> 
+                <p style="margin-bottom: 10px"> 1. It will inform you of the approximate cost of your purchase in U.S. Dollars based upon today's exchange rates.</p> 
+                <p style="margin-bottom: 10px"> 2. It will let you know how today's exchange rates compare to a 50-day moving average. If you are above the 50-day average, it may be advantageous to wait a week or two prior to purchasing. Conversely, if current rates are below their 50-day average, you may want to take advantage of the exchange rates while they are in your favor.  </p></div>
+            
+            <div class="paragraph">
+                <?php
+                $from   = 'USD'; /*change it to your required currencies */
+                $to     = 'INR';
+                $url = 'http://finance.yahoo.com/d/quotes.csv?e=.csv&f=sl1d1t1&s='. $from . $to .'=X';
+                $handle = @fopen($url, 'r');
+
+                if ($handle) {
+                    $result = fgets($handle, 4096);
+                fclose($handle);
+                }
+                $allData = explode(',',$result); /* Get all the contents to an array */
+                $dollarValue = $allData[1];
+
+                echo 'Value of $1 in Indian Rupees is Rs. '.$dollarValue;
+                ?>
+            </div>
 		</div>
+            
       </div>
-
 	</div>
+    
 </div>
 
-</div>
-
+          
+</div>     
     </div><!-- end content-wrap -->
+        
 
     <div class="footer-wrap">
       <div class="container">
