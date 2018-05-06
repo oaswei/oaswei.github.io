@@ -23,13 +23,14 @@
 <link href='http://fonts.googleapis.com/css?family=Cardo:400,700,400italic&subset=latin,latin-ext' rel='stylesheet' type='text/css' />
 <link href='http://cdn2.editmysite.com/fonts/Journal/font.css?2' rel='stylesheet' type='text/css' />
 <style type='text/css'>
+<link href='http://fonts.googleapis.com/css?family=Parisienne:400,700,400italic,700italic&subset=latin,latin-ext' rel='stylesheet' type='text/css' />
 .wsite-elements.wsite-not-footer:not(.wsite-header-elements) div.paragraph, .wsite-elements.wsite-not-footer:not(.wsite-header-elements) p, .wsite-elements.wsite-not-footer:not(.wsite-header-elements) .product-block .product-title, .wsite-elements.wsite-not-footer:not(.wsite-header-elements) .product-description, .wsite-elements.wsite-not-footer:not(.wsite-header-elements) .wsite-form-field label, .wsite-elements.wsite-not-footer:not(.wsite-header-elements) .wsite-form-field label, #wsite-content div.paragraph, #wsite-content p, #wsite-content .product-block .product-title, #wsite-content .product-description, #wsite-content .wsite-form-field label, #wsite-content .wsite-form-field label, .blog-sidebar div.paragraph, .blog-sidebar p, .blog-sidebar .wsite-form-field label, .blog-sidebar .wsite-form-field label {font-family:"Crimson Text" !important;}
 #wsite-content div.paragraph, #wsite-content p, #wsite-content .product-block .product-title, #wsite-content .product-description, #wsite-content .wsite-form-field label, #wsite-content .wsite-form-field label, .blog-sidebar div.paragraph, .blog-sidebar p, .blog-sidebar .wsite-form-field label, .blog-sidebar .wsite-form-field label {}
 .wsite-elements.wsite-footer div.paragraph, .wsite-elements.wsite-footer p, .wsite-elements.wsite-footer .product-block .product-title, .wsite-elements.wsite-footer .product-description, .wsite-elements.wsite-footer .wsite-form-field label, .wsite-elements.wsite-footer .wsite-form-field label{font-family:"Open Sans" !important;color:#626262 !important;text-transform:  uppercase !important;letter-spacing: 1px !important;}
 .wsite-elements.wsite-not-footer:not(.wsite-header-elements) h2, .wsite-elements.wsite-not-footer:not(.wsite-header-elements) .product-long .product-title, .wsite-elements.wsite-not-footer:not(.wsite-header-elements) .product-large .product-title, .wsite-elements.wsite-not-footer:not(.wsite-header-elements) .product-small .product-title, #wsite-content h2, #wsite-content .product-long .product-title, #wsite-content .product-large .product-title, #wsite-content .product-small .product-title, .blog-sidebar h2 {font-family:"Open Sans" !important;}
 #wsite-content h2, #wsite-content .product-long .product-title, #wsite-content .product-large .product-title, #wsite-content .product-small .product-title, .blog-sidebar h2 {color:#2a2a2a !important;}
 .wsite-elements.wsite-footer h2, .wsite-elements.wsite-footer .product-long .product-title, .wsite-elements.wsite-footer .product-large .product-title, .wsite-elements.wsite-footer .product-small .product-title{}
-#wsite-title {font-family:"Journal" !important;text-transform:  none !important;letter-spacing: 3px !important;}
+#wsite-title {font-family: "Parisienne" !important; font-style: normal; font-weight: 200; letter-spacing: 5px !important;}
 .wsite-menu-default a {}
 .wsite-menu a {}
 .wsite-image div, .wsite-caption {}
@@ -83,7 +84,7 @@ var STYLE_PREFIX = 'wsite';
 	
 	function initFlyouts(){
 		initPublishedFlyoutMenus(
-			[{"id":"778626675353014700","title":"About Us","url":"index.html","target":"","nav_menu":false,"nonclickable":false},{"id":"577492856719654362","title":"Our Celebration","url":"our-celebration.html","target":"","nav_menu":false,"nonclickable":false},{"id":"899332292843041346","title":"Our Registry","url":"our-registry.html","target":"","nav_menu":false,"nonclickable":false},{"id":"723554038645534579","title":"RSVP Information","url":"rsvp-information.html","target":"","nav_menu":false,"nonclickable":false}],
+			[{"id":"778626675353014700","title":"About Us","url":"index.html","target":"","nav_menu":false,"nonclickable":false},{"id":"577492856719654362","title":"Our Celebration","url":"our-celebration.html","target":"","nav_menu":false,"nonclickable":false},{"id":"899332292843041346","title":"Registry","url":"our-registry.html","target":"","nav_menu":false,"nonclickable":false},{"id":"723554038645534579","title":"RSVP","url":"rsvp-information.html","target":"","nav_menu":false,"nonclickable":false}],
 			"899332292843041346",
 			'',
 			'active',
@@ -132,21 +133,21 @@ var STYLE_PREFIX = 'wsite';
 			</a>
 			
 		</li>
-		<li id="active" class="wsite-menu-item-wrap">
+		<li id="pg723554038645534579" class="wsite-menu-item-wrap">
 			<a
 						href="our-registry.html"
 				class="wsite-menu-item"
 				>
-				Our Registry
+				Registry
 			</a>
 			
 		</li>
-		<li id="pg723554038645534579" class="wsite-menu-item-wrap">
+		<li id="active" class="wsite-menu-item-wrap">
 			<a
 						href="rsvp-information.html"
 				class="wsite-menu-item"
 				>
-				RSVP Information
+				RSVP
 			</a>
 			
 		</li>
@@ -163,9 +164,10 @@ var STYLE_PREFIX = 'wsite';
 		<div class="wsite-section-content">
         <div class="container">
 			<div class="wsite-section-elements">
-				<h2 class="wsite-content-title">RSVP Information</h2>
+				<h2 class="wsite-content-title">RSVP</h2>
 
-<div class="paragraph">Blah Blah Blah.</div>
+<div class="paragraph">
+                <p> We will be sending follow up invites next month that will explain the RSVP process. We will update this part of our website once those invitations have been sent out</p></div>
 			</div>
 		</div>
       </div>
@@ -202,21 +204,21 @@ var STYLE_PREFIX = 'wsite';
 			</a>
 			
 		</li>
-		<li id="active" class="wsite-menu-item-wrap">
+		<li id="pg723554038645534579" class="wsite-menu-item-wrap">
 			<a
 						href="our-registry.html"
 				class="wsite-menu-item"
 				>
-				Our Registry
+				Registry
 			</a>
 			
 		</li>
-		<li id="pg723554038645534579" class="wsite-menu-item-wrap">
+		<li id="active" class="wsite-menu-item-wrap">
 			<a
 						href="rsvp-information.html"
 				class="wsite-menu-item"
 				>
-				RSVP Information
+				RSVP
 			</a>
 			
 		</li>
