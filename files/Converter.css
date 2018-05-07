@@ -1,0 +1,133 @@
+@import url(https://fonts.googleapis.com/css?family=Roboto:400,300,500,700,100);
+body {
+  margin: 0;
+  font-size: 62.5%;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+.header {
+  width: 100%;
+  text-align: center;
+  color: #282828;
+  margin: 20px 0;
+  font-family: 'Garamond', serif    
+}
+
+.header h1,
+.header h2,
+.header h3 {
+  margin: 5px 0;
+  font-family: 'Garamond', serif
+}
+
+.header h1 {
+  font: 500 3em/1.8em 'Garamond',serif;
+}
+
+.header h2 {
+  font: 300 1.8em/1em 'Garamond',serif;
+}
+
+h3 {
+  font: 300 1.4em/1em 'Garamond',serif;
+  text-align: center;
+  width: 100%;
+}
+
+.conversionForm {
+  margin: auto;
+  width: 100%;
+  max-width: 200px;
+  overflow: hidden;
+  font: 300 1.2em/1em 'Garamond',serif;
+}
+
+.conversionForm label {
+  font-weight: 500;
+    font-family: 'Garamond',serif;
+}
+
+.conversionForm select,
+.conversionForm input {
+  outline: none;
+        font-family: 'Garamond',serif;
+}
+
+.conversionForm__amount {
+  width: 80%;
+  margin: auto;
+      font-family: 'Garamond',serif;
+}
+
+.conversionForm__amount label {
+  text-align: center;
+  display: block;
+        font-family: 'Garamond',serif;
+}
+
+.conversionForm__amount input {
+  margin: 5px auto;
+  display: block;
+        font-family: 'Garamond',serif;
+}
+
+.conversionForm__currencies {
+  width: 100%;
+  float: left;
+  clear: left;
+  margin: 10px 0;
+        font-family: 'Garamond',serif;
+}
+
+.conversionForm__currencies div {
+  width: 50%;
+  float: left;
+        font-family: 'Garamond',serif;
+}
+
+.conversionForm__currencies div label {
+  text-align: center;
+  display: block;
+        font-family: 'Garamond',serif;
+}
+
+.conversionForm__currencies div select {
+  width: 55px;
+  display: block;
+  margin: 5px auto;
+  border: none;
+        font-family: 'Garamond',serif;
+}
+
+.conversionForm .currencySubmit {
+  display: block;
+      font-family: 'Garamond',serif;
+  margin: 10px auto;
+  appearance: none;
+  background-color: #000;
+  color: #fff;
+  border: 1px solid #000;
+  font: 300 1em/1em 'Garamond', sans-serif;
+  padding: 10px 15px 8px 15px;
+  text-transform: uppercase;
+  cursor: pointer;
+  -webkit-transition: all 0.1s;
+  -moz-transition: all 0.1s;
+  transition: all 0.1s;
+}
+
+.conversionForm .currencySubmit:hover {
+  background-color: #fff;
+  color: #000;
+  border: 1px solid #C7C7C7;
+  font-weight: 500;
+        font-family: 'Garamond',serif;
+}
+
+.output {
+  font: 500 2em/1em 'Garamond',serif;
+  text-align: center;
+}
