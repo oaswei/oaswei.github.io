@@ -29,7 +29,7 @@
 .wsite-elements.wsite-not-footer:not(.wsite-header-elements) h2, .wsite-elements.wsite-not-footer:not(.wsite-header-elements) .product-long .product-title, .wsite-elements.wsite-not-footer:not(.wsite-header-elements) .product-large .product-title, .wsite-elements.wsite-not-footer:not(.wsite-header-elements) .product-small .product-title, #wsite-content h2, #wsite-content .product-long .product-title, #wsite-content .product-large .product-title, #wsite-content .product-small .product-title, .blog-sidebar h2 {font-family:"Open Sans" !important;}
 #wsite-content h2, #wsite-content .product-long .product-title, #wsite-content .product-large .product-title, #wsite-content .product-small .product-title, .blog-sidebar h2 {color:#2a2a2a !important;}
 .wsite-elements.wsite-footer h2, .wsite-elements.wsite-footer .product-long .product-title, .wsite-elements.wsite-footer .product-large .product-title, .wsite-elements.wsite-footer .product-small .product-title{}
-#wsite-title {font-family: "Parisienne" !important; font-style: normal; font-weight: 200; letter-spacing: 5px !important;}
+#wsite-title {font-family:"Parisienne" !important;text-transform:  none !important;letter-spacing: 5px !important;}
 .wsite-menu-default a {}
 .wsite-menu a {}
 .wsite-image div, .wsite-caption {}
@@ -206,35 +206,35 @@ $(function() {
             
             <div class="paragraph"> 
                 <h3> Currency Calculator </h3>
-                <p style="margin-bottom: 10px"> The following currency calculator will provide you with two helpful bits of information prior to your purchase. </p> 
-                <p style="margin-bottom: 10px"> 1. It will inform you of the approximate cost of your purchase in U.S. Dollars based upon today's exchange rates.</p> 
-                <p style="margin-bottom: 10px"> 2. It will let you know how today's exchange rates compare to a 50-day moving average. If you are above the 50-day average, it may be advantageous to wait a week or two prior to purchasing. Conversely, if current rates are below their 50-day average, you may want to take advantage of the exchange rates while they are in your favor.  </p></div>
+                <p style="margin-bottom: 10px"> <p>The following currency calculator will inform you of the approximate cost of your purchase in U.S. Dollars based upon today's exchange rates.</p> 
             
-            
-            <div
-            class="sprite">
-            </div>
-            
-            
-            <div class="paragraph">
-                <?php
-                $from   = 'USD'; /*change it to your required currencies */
-                $to     = 'INR';
-                $url = 'http://finance.yahoo.com/d/quotes.csv?e=.csv&f=sl1d1t1&s='. $from . $to .'=X';
-                $handle = @fopen($url, 'r');
+		    </div>
 
-                if ($handle) {
-                    $result = fgets($handle, 4096);
-                fclose($handle);
-                }
-                $allData = explode(',',$result); /* Get all the contents to an array */
-                $dollarValue = $allData[1];
+<html lang="en">
 
-                echo 'Value of $1 in Indian Rupees is Rs. '.$dollarValue;
-                ?>
-            </div>
-		</div>
+	<body>
+
+
+		<form class="conversionForm">
+
+			<section class="conversionForm__amount">
+				<label>Canadian Dollars:</label>
+				<input type="number" class="currencyValue">
+			</section>
+
+
+			<input type="submit" value="Convert" class="currencySubmit">
+		</form>
+        
+		<label>U.S. Dollars: </label><output class="output"></output>
             
+	</body>
+
+</html>
+
+<script   src="files/Converter.js"   integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44="   crossorigin="anonymous"></script>
+<script type="text/javascript" src="files/Converter.js"></script>
+
       </div>
 	</div>
     
